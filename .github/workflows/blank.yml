@@ -50,7 +50,6 @@ jobs:
           SSH_PROD_HOST: ${{ secrets.SSH_PROD__HOST }}
           SSH_PROD_USER: ${{ secrets.SSH_PROD_USER }}
         run: 
-          apt-get install openssh-client
           composer install --no-dev
           npm install --production=true
           npm run prod
