@@ -25,10 +25,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: install dependancies
-        run: 
-          composer install --no-dev
-          npm install
+      - name: install php dependancies
+        run: composer install --no-dev
+      
+      - name: install node dependancies
+        run: npm install
       
       - name: boot
         run: npm run prod
