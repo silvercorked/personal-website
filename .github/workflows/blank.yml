@@ -21,8 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: composer
-      - uses: node
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -54,8 +52,8 @@ jobs:
         run: 
           apt-get install openssh-client
           composer install --no-dev
-          node install --production=true
-          node run prod
+          npm install --production=true
+          npm run prod
           touch .env
           echo "APP_NAME=\"$APP_NAME\"" >> .env
           echo "APP_ENV=$APP_ENV" >> .env
