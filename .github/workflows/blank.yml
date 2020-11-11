@@ -28,7 +28,7 @@ jobs:
       - name: install dependancies
         run: 
           composer install --no-dev
-          npm install --production=true
+          npm install
       
       - name: boot
         run: npm run prod
