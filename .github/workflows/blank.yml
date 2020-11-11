@@ -57,7 +57,7 @@ jobs:
           SESSION_LIFETIME: ${{ secrets.SESSION_LIFETIME }}
           SSH_PROD_HOST: ${{ secrets.SSH_PROD__HOST }}
           SSH_PROD_USER: ${{ secrets.SSH_PROD_USER }}
-        run: 
+        run: |
           touch .env
           echo "APP_NAME=\"$APP_NAME\"" >> .env
           echo "APP_ENV=$APP_ENV" >> .env
