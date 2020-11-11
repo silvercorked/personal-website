@@ -55,7 +55,7 @@ jobs:
           QUEUE_CONNECTION: ${{ secrets.QUEUE_CONNECTION }}
           SESSION_DRIVER: ${{ secrets.SESSION_DRIVER }}
           SESSION_LIFETIME: ${{ secrets.SESSION_LIFETIME }}
-          SSH_PROD_HOST: ${{ secrets.SSH_PROD__HOST }}
+          SSH_PROD_HOST: ${{ secrets.SSH_PROD_HOST }}
           SSH_PROD_USER: ${{ secrets.SSH_PROD_USER }}
         run: |
           touch .env
@@ -78,7 +78,7 @@ jobs:
           echo "QUEUE_DRIVER=$QUEUE_DRIVER" >> .env
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
-          scp release.tar.gz $SSH_PROD_USER@$SSH_PROD_HOST:/home/$SSH_DEV_USER
+          scp release.tar.gz $SSH_PROD_USER@$SSH_PROD_HOST:$APP_PROD_ROOT
           ssh $SSH_PROD_USER@$SSH_PROD_HOST "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
           echo Add other actions to build,
           echo test, and deploy your project.
