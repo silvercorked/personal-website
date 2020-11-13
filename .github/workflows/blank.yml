@@ -79,6 +79,22 @@ jobs:
           echo "SESSION_DRIVER=$SESSION_DRIVER" >> .env
           echo "SESSION_LIFETIME=$SESSION_LIFETIME" >> .env
           echo "QUEUE_DRIVER=$QUEUE_DRIVER" >> .env
+          
+      - name: Setup SSH KEY
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_PROD_HOST
+            User $SSH_PROD_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+          
+      - name: Create and deploy tar ball
+        run: |
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
           scp release.tar.gz $SSH_PROD_USER@$SSH_PROD_HOST:$APP_PROD_ROOT
