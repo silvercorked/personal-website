@@ -40,7 +40,6 @@ jobs:
           APP_DEBUG: ${{ secrets.APP_DEBUG }}
           APP_ENV: ${{ secrets.APP_ENV }}
           APP_NAME: ${{ secrets.APP_NAME }}
-          APP_PROD_ROOT: ${{ secrets.APP_PROD_ROOT }}
           APP_URL: ${{ secrets.APP_URL }}
           BROADCAST_DRIVER: ${{ secrets.BROADCAST_DRIVER }}
           CACHE_DRIVER: ${{ secrets.CACHE_DRIVER }}
@@ -55,9 +54,6 @@ jobs:
           QUEUE_CONNECTION: ${{ secrets.QUEUE_CONNECTION }}
           SESSION_DRIVER: ${{ secrets.SESSION_DRIVER }}
           SESSION_LIFETIME: ${{ secrets.SESSION_LIFETIME }}
-          SSH_PROD_HOST: ${{ secrets.SSH_PROD_HOST }}
-          SSH_PROD_USER: ${{ secrets.SSH_PROD_USER }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} 
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ../private.key
@@ -79,8 +75,12 @@ jobs:
           echo "SESSION_DRIVER=$SESSION_DRIVER" >> .env
           echo "SESSION_LIFETIME=$SESSION_LIFETIME" >> .env
           echo "QUEUE_DRIVER=$QUEUE_DRIVER" >> .env
-          
+
       - name: Setup SSH KEY
+        env:
+          SSH_PROD_HOST: ${{ secrets.SSH_PROD_HOST }}
+          SSH_PROD_USER: ${{ secrets.SSH_PROD_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/staging.key
@@ -88,16 +88,18 @@ jobs:
           cat >>~/.ssh/config <<END
           Host staging
             HostName $SSH_PROD_HOST
-            User $SSH_PROD_USER:$APP_PROD_ROOT
+            User $SSH_PROD_USER
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
           END
-          
+
       - name: Create and deploy tar ball
+        env:
+          APP_PROD_ROOT: ${{ secrets.APP_PROD_ROOT }}
         run: |
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
-          scp release.tar.gz staging
+          scp release.tar.gz staging:$APP_PROD_ROOT
           ssh staging "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
           echo Add other actions to build,
           echo test, and deploy your project.
