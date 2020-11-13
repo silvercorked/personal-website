@@ -88,7 +88,7 @@ jobs:
           cat >>~/.ssh/config <<END
           Host staging
             HostName $SSH_PROD_HOST
-            User $SSH_PROD_USER
+            User $SSH_PROD_USER:$APP_PROD_ROOT
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
           END
@@ -97,7 +97,7 @@ jobs:
         run: |
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
-          scp release.tar.gz staging:$APP_PROD_ROOT
+          scp release.tar.gz staging
           ssh staging "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
           echo Add other actions to build,
           echo test, and deploy your project.
