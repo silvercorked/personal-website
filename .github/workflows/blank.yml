@@ -97,7 +97,7 @@ jobs:
         run: |
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
-          scp release.tar.gz $SSH_PROD_USER@$SSH_PROD_HOST:$APP_PROD_ROOT
-          ssh $SSH_PROD_USER@$SSH_PROD_HOST "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
+          scp release.tar.gz staging:$APP_PROD_ROOT
+          ssh staging "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
           echo Add other actions to build,
           echo test, and deploy your project.
