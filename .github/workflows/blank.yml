@@ -84,7 +84,6 @@ jobs:
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/staging.key
-          cat ~/.ssh/staging.key
           chmod 600 ~/.ssh/staging.key
           cat >>~/.ssh/config <<END
           Host staging
@@ -96,11 +95,10 @@ jobs:
 
       - name: Create and deploy tar ball
         env:
-          APP_PROD_ROOT: ${{ secrets.APP_PROD_ROOT }}
+          APP_PROD_ROOT: "/home/dh_646qqm/alexwissing.com"
         run: |
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
           scp release.tar.gz staging:$APP_PROD_ROOT
           ssh staging "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
-          echo Add other actions to build,
-          echo test, and deploy your project.
+
