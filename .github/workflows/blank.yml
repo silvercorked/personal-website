@@ -100,5 +100,5 @@ jobs:
           touch release.tar.gz
           tar -czf release.tar.gz . --exclude=./release.tar.gz
           scp release.tar.gz staging:$APP_PROD_ROOT
-          ssh staging "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
+          ssh staging "tar -xf $APP_PROD_ROOT/release.tar.gz && rm release.tar.gz"
 
