@@ -16,7 +16,22 @@
 								<b-row>
 									<b-col>
 										<p>
-											blah blah
+											My name is Alex Wissing. I'm currently a student at the University
+											of Nebraska at Omaha studying Computer Science and Computer Engineering.
+											I aim to graduate sometime around 2022 or 2023 depending on what I can sort
+											out for master's degree opportunities.
+										</p>
+										<p>
+											I have a lot of experience with web, at least web for smaller sites, because of
+											my work with "The Attic," a small team in the third floor of the Peter Kiewit
+											Institute that takes lower budget jobs that students can complete. I'll list some
+											of those projects below, though some will be missing depending on the privacy
+											requirements of the client
+										</p>
+										<p>
+											I've created this website as both an excuse to get some experience with
+											Laravel 8 and Laravel Jetstream as well as to have a space to post references to projects
+											in a single space. I'll be improving it intermittently.
 										</p>
 									</b-col>
 								</b-row>
@@ -37,7 +52,14 @@
 								<b-row>
 									<b-col>
 										<p>
-											blah blah
+											<b-link href="https://github.com/silvercorked">My Github</b-link>
+										</p>
+										<p>
+											<b-link href="https://partnership2020.org/">Partnership 2020</b-link>
+											My co-worker Gus and I made this one. It was a request of the U.S. State department
+											to create a site that shows the university partnerships between universities of
+											the United States and India. I did most of the map work and a large portion of the
+											frontend, while Gus handled almost all of the backend and some frontend.
 										</p>
 									</b-col>
 								</b-row>
