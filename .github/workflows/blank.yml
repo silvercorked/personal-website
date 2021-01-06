@@ -99,6 +99,6 @@ jobs:
         run: |
           touch release.tar.gz
           tar --exclude=./release.tar.gz -czf release.tar.gz .
-          scp release.tar.gz staging:$APP_PROD_ROOT
-          ssh staging "tar -xf release.tar.gz -C $APP_PROD_ROOT && rm release.tar.gz"
+          scp release.tar.gz staging:/home/dh_646qqm/alexwissing.com/
+          ssh staging "tar -xf /home/dh_646qqm/alexwissing.com/release.tar.gz && rm /home/dh_646qqm/alexwissing.com/release.tar.gz"
 
