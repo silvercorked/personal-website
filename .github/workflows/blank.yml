@@ -98,7 +98,7 @@ jobs:
           APP_PROD_ROOT: "/home/dh_646qqm/alexwissing.com/"
         run: |
           touch release.tar.gz
-          tar -czf release.tar.gz . --exclude=./release.tar.gz --warning=no-file-changed
+          tar -czf release.tar.gz . --exclude=./release.tar.gz
           scp release.tar.gz staging:/home/dh_646qqm/alexwissing.com/
           ssh staging "tar -xf /home/dh_646qqm/alexwissing.com/release.tar.gz && rm /home/dh_646qqm/alexwissing.com/release.tar.gz"
 
