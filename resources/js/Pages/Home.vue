@@ -53,12 +53,15 @@
 									<b-col>
 										<p>
 											<b-link href="https://github.com/silvercorked">My Github</b-link>
+											This generally has a lot of different random programs I've worked on. There's
+											a spring app, some laravel, and decent bit of java. I've made a few large programs
+											for approximating some different aspects of rolling dice. I've also got a little
+											text-based game that generally works, as well as a game using Java Swing.
 										</p>
 										<p>
 											<b-link href="https://partnership2020.org/">Partnership 2020</b-link>
-											My co-worker Gus and I made this one. It was a request of the U.S. State department
-											to create a site that shows the university partnerships between universities of
-											the United States and India. I did most of the map work and a large portion of the
+											My co-worker, Gus, and I made this one. It was a request of the U.S. State department
+											to create a site that shows the university partnerships between the United States and India. I did most of the map work and a large portion of the
 											frontend, while Gus handled almost all of the backend and some frontend.
 										</p>
 									</b-col>
