@@ -104,5 +104,5 @@ jobs:
           touch release.tar.gz
           tar --exclude=./release.tar.gz -czf release.tar.gz .
           scp release.tar.gz staging:/home/dh_646qqm/
-          ssh staging "ls -al && mv release.tar.gz /alexwissing.com && tar -xf alexwissing.com/release.tar.gz && rm alexwissing.com/release.tar.gz"
+          ssh staging "ls -al && mv release.tar.gz alexwissing.com/ && tar -xf alexwissing.com/release.tar.gz && rm alexwissing.com/release.tar.gz"
 
