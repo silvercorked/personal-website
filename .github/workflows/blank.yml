@@ -103,6 +103,6 @@ jobs:
         run: |
           touch release.tar.gz
           tar --exclude=./release.tar.gz -czf release.tar.gz .
-          scp release.tar.gz staging:/home/dh_646qqm/alexwissing.com/
-          ssh staging "tar -xf /home/dh_646qqm/alexwissing.com/release.tar.gz && rm /home/dh_646qqm/alexwissing.com/release.tar.gz"
+          scp release.tar.gz staging:/home/dh_646qqm/
+          ssh staging "mv release.tar.gz alexwissing.com/ && tar -xf /home/dh_646qqm/alexwissing.com/release.tar.gz && rm /home/dh_646qqm/alexwissing.com/release.tar.gz"
 
