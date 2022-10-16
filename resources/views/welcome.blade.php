@@ -31,6 +31,7 @@
                                 <p>
                                     I'll list some projects I've worked on before. Some are private projects through my work at the
                                     <a
+                                        target="_blank"
                                         class="text-decoration-none"
                                         href="https://www.unomaha.edu/college-of-information-science-and-technology/engagement/centers/center-for-management-information-technology/applied-it-projects/attic.php"
                                     >
@@ -61,13 +62,13 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <a class="h5 text-decoration-none" href="https://partnership2020.org/">Partnership 2020</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://partnership2020.org/">Partnership 2020</a>
                                 <p>
                                     My co-worker, Gus, and I made this one. It was a request of the U.S. State department
                                     to create a site that shows the university partnerships between the United States and India. I did most of the map work and a large portion of the
                                     frontend, while Gus handled almost all of the backend and some frontend.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked">My Github</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked">My Github</a>
                                 <p>
                                     This contains many personal projects related to class and some just for fun.
                                 </p>
@@ -78,16 +79,18 @@
                                     a tree in the db. The backend is Django and the frontend is Vue 2.
                                 </p>
                                 <p>
-                                    I can't show the actual repo/code, as it is now their product, but here's their <a class="text-decoration-none" href="https://www.unetech.org/portfolio/uneplan/">website</a>.
+                                    I can't show the actual repo/code, as it is now their product, but here's their <a target="_blank" class="text-decoration-none" href="https://www.unetech.org/portfolio/uneplan/">website</a>.
                                 </p>
                                 <span class="h5">Computer Engineering Capstone (
                                     <a
+                                        target="_blank"
                                         class="text-decoration-none"
                                         href="https://github.com/silvercorked/OvalMate"
                                     >
                                         LPC5512 Custom Board Code
                                     </a>)(
                                     <a
+                                        target="_blank"
                                         class="text-decoration-none"
                                         href="https://github.com/silvercorked/OvalMateUI"
                                     >
@@ -107,36 +110,45 @@
                                     the pen up and down, 2 stepper motors to drive the arms of an XY-plotter, an IR sensor to attempt Localization,
                                     a 7-segment display for displaying Error Codes, and 5 buttons.
                                 </p>
-                                <p>
+                                <p class="mb-0">
                                     I wrote all of the code in the 2 linked repos to accomplish this.
                                     The rest of the team worked on the other aspects, such as project management, designing and ordering the PCB and
                                     components, and designing power circuitry.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/Raytracer-CSCI4620">Raytracer</a>
+                                <p class="mb-0">
+                                    <a target="_blank" class="text-decoration-none" href="https://youtu.be/soO_XK59jR0">Video Demonstration</a>
+                                </p>
+                                <p class="mb-0">
+                                    <a target="_blank" class="text-decoration-none" href="https://youtu.be/gpEfLllFji8">Capstone Presentation</a>
+                                </p>
+                                <p>
+                                    <a target="_blank" class="text-decoration-none" href="https://drive.google.com/file/d/1OdBfM5sa-d9HETcekw_Tbjh0S5ONHyS3/view?usp=sharing">Report</a>
+                                </p>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/Raytracer-CSCI4620">Raytracer</a>
                                 <p>
                                     Alongside playing with 3DSMax, CSCI 4620 also had us create a raytracer which could parse .obj files
                                     and render an image of a scene. I worked with OpenCV to get this working. The professor programmed
                                     in Java, but I got permission to practice some C++, so I wrote it in that.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/ImageProcessor-CSCI2620">Image Processor</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/ImageProcessor-CSCI2620">Image Processor</a>
                                 <p>
                                     Currently a work in progress. Takes in images and can apply basic transform, rotate, scale,
                                     send an image to greyscale, remove colors, convert an image into a histogram displaying frequency of
                                     color Value, and sooner or later, stegonography.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/bullet-game">Bullet Game</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/bullet-game">Bullet Game</a>
                                 <p>
                                     A game made in Browser using JS and a canvas element. It's sort of a bullet hell, but not
                                     very extensive.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/NFAtoDFAConverter">NFA to DFA</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/NFAtoDFAConverter">NFA to DFA</a>
                                 <p>
                                     As part of my Theory of Computation class, I created an NFA (non-deterministic finite automata)
                                     to DFA (deterministic finite automata) converter. Since an NFA is basically just a vague DFA (some transitions
                                     to self are ignored) it can be converted to a DFA. In this project, I had just learned about
                                     Java's Collection's streams... so it's like 90% stream objects.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/GeneralizedDiceStatRollingComparitor">Dice Roll Comparitor</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/GeneralizedDiceStatRollingComparitor">Dice Roll Comparitor</a>
                                 <p>
                                     My friends often debated DND5e stat generation methods. So I just did all of them and calcualted some stats on em.
                                     To be honest, this was a mistake. With multithreading (using my personal, and rather bad, thread management strategy),
@@ -150,25 +162,25 @@
                                     Here are some other projects based around generating stats for DND concepts:
                                 </p>
                                 <p class="mb-0">
-                                    <a class="text-decoration-none" href="https://github.com/silvercorked/CardStatistics">DND5e Stats via Cards</a>
+                                    <a target="_blank" class="text-decoration-none" href="https://github.com/silvercorked/CardStatistics">DND5e Stats via Cards</a>
                                 </p>
                                 <p class="mb-0">
-                                    <a class="text-decoration-none" href="https://github.com/silvercorked/DamageGivenAChanceToHit">DND5e Damage calculator</a>
+                                    <a target="_blank" class="text-decoration-none" href="https://github.com/silvercorked/DamageGivenAChanceToHit">DND5e Damage calculator</a>
                                 </p>
                                 <p class="mb-0">
-                                    <a class="text-decoration-none" href="https://github.com/silvercorked/AdvantageDisAdvantageEstimator">Advantage Vs +modified</a>
+                                    <a target="_blank" class="text-decoration-none" href="https://github.com/silvercorked/AdvantageDisAdvantageEstimator">Advantage Vs +modified</a>
                                 </p>
                                 <p class="mb-0">
-                                    <a class="text-decoration-none" href="https://github.com/silvercorked/PointBuyVsRoll4D6DropLowest">Point Buy Vs Roll 4d6 drop lowest</a>
+                                    <a target="_blank" class="text-decoration-none" href="https://github.com/silvercorked/PointBuyVsRoll4D6DropLowest">Point Buy Vs Roll 4d6 drop lowest</a>
                                 </p>
                                 <p class="">
-                                    <a class="text-decoration-none" href="https://github.com/silvercorked/ChanceOfRollingAtLeastOne16OnStats">Chance of rolling at least 1 16</a>
+                                    <a target="_blank" class="text-decoration-none" href="https://github.com/silvercorked/ChanceOfRollingAtLeastOne16OnStats">Chance of rolling at least 1 16</a>
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/mathFunctionGraphingChaoticGraphs">Chaos Graphs</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/mathFunctionGraphingChaoticGraphs">Chaos Graphs</a>
                                 <p>
                                     I've got a guilty pleasure. It's making graphs of mathematical chaos functions. Yeah, anyway here's a bunch of them.
                                 </p>
-                                <a class="h5 text-decoration-none" href="https://github.com/silvercorked/an-old-bad-game">My First Game</a>
+                                <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/an-old-bad-game">My First Game</a>
                                 <p>
                                     Made this in Highschool with a friend. It isn't very good and it's also very buggy, but you
                                     can walk around and collect coins and that's pretty cool.
