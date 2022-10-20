@@ -19,13 +19,13 @@
                                 <p>
                                     My name is Alex Wissing. I'm currently a student at the University
                                     of Nebraska at Omaha studying Computer Science and Computer Engineering.
-                                    I with be graduating with my bachlors in Computer Engineering and Computer Science
+                                    I will be graduating with my bachelors in Computer Engineering and Computer Science
                                     in December of 2022. In addition to those two degrees, I have a minor in Robotics, Women's
                                     and Gender Studies, and Mathematics.
                                 </p>
                                 <p>
                                     I'll be continuing my education at the University of Nebraska at Omaha
-                                    in the Master's program for Computer Science. I ought to be able to graduate with my Master's
+                                    in the Master's program in Computer Science. I ought to be able to graduate with my Master's
                                     in about 2024, presuming everything goes well.
                                 </p>
                                 <p>
@@ -64,8 +64,8 @@
                             <div class="col">
                                 <a target="_blank" class="h5 text-decoration-none" href="https://partnership2020.org/">Partnership 2020</a>
                                 <p>
-                                    My co-worker, Gus, and I made this one. It was a request of the U.S. State department
-                                    to create a site that shows the university partnerships between the United States and India. I did most of the map work and a large portion of the
+                                    My co-worker, Gus, and I made this one. It was a request by the U.S. State Department
+                                    to create a site that shows university partnerships between the United States and India. I did most of the map work and a large portion of the
                                     frontend, while Gus handled almost all of the backend and some frontend.
                                 </p>
                                 <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked">My Github</a>
@@ -75,7 +75,7 @@
                                 <span class="h5">UNePlan Rewrite</span>
                                 <p>
                                     My team at the Attic was responsible for rewriting the UNePlan software for UNeTech,
-                                    an offshoot company of UNMC. It's a strategic planning tool. We actually encapsulate
+                                    an offshoot company of the University of Nebraska Medical Center. It's a strategic planning tool. We actually encapsulate
                                     a tree in the db. The backend is Django and the frontend is Vue 2.
                                 </p>
                                 <p>
@@ -100,13 +100,13 @@
                                 <p>
                                     This project was really fun and challenging. We had to create a device that would take in information
                                     which would be used to fill in specifc ovals on an ES&S (Election Systems and Software) 11x8.5" ballot.
-                                    The ballots would then be used for testing the physical election machines ES&S produces. Being test ballots,
+                                    The ballots would then be used for testing the physical election machines ES&S produce. Being test ballots,
                                     these essentially looked like a Scantron form.
                                 </p>
                                 <p>
                                     I mimicked this view in a .NET framework Windows app.
                                     The Windows app would then communicate over USB (using a custom written driver (included in the LPC5512 code))
-                                    to a PCB designed by the team. The board needed to be programmed to interact with a servo motor to move
+                                    to a PCB designed by the team. The board needed to be programed to interact with a servo motor to move
                                     the pen up and down, 2 stepper motors to drive the arms of an XY-plotter, an IR sensor to attempt Localization,
                                     a 7-segment display for displaying Error Codes, and 5 buttons.
                                 </p>
@@ -127,7 +127,7 @@
                                 <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/Raytracer-CSCI4620">Raytracer</a>
                                 <p>
                                     Alongside playing with 3DSMax, CSCI 4620 also had us create a raytracer which could parse .obj files
-                                    and render an image of a scene. I worked with OpenCV to get this working. The professor programmed
+                                    and render an image of a scene. I worked with OpenCV to get this working. The professor programed
                                     in Java, but I got permission to practice some C++, so I wrote it in that.
                                 </p>
                                 <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/ImageProcessor-CSCI2620">Image Processor</a>
@@ -150,13 +150,13 @@
                                 </p>
                                 <a target="_blank" class="h5 text-decoration-none" href="https://github.com/silvercorked/GeneralizedDiceStatRollingComparitor">Dice Roll Comparitor</a>
                                 <p>
-                                    My friends often debated DND5e stat generation methods. So I just did all of them and calcualted some stats on em.
+                                    My friends often debated DND5e stat generation methods. So I just did all of them and calculated some stats on em.
                                     To be honest, this was a mistake. With multithreading (using my personal, and rather bad, thread management strategy),
                                     this took my poor laptop 18 straight hours to calculate. The output .csv file is 3 GB. I had to download a custom program
                                     to even read the file as excel just crashes. This project calculates all combinations of dice between d4, d6, d8, d10, d12,
                                     and d20 such that no dice type has more than 11 of itself in the set (ie, 2d4 + 10d6 + 3d8 would be
                                     tested, but 27d4 would not). That's about 12 million dice combinations (or at least that's how many rows were in the CSV).
-                                    Shoulda checked how many combinations before running it I think.
+                                    Shoulda checked how many combinations before running it, I think.
                                 </p>
                                 <p class="mb-0">
                                     Here are some other projects based around generating stats for DND concepts:
